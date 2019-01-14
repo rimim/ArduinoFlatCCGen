@@ -6,7 +6,7 @@ mkdir -p $OUTPUT_DIR/src && \
 rm -rf tmp && \
 mkdir -p tmp && \
 cd tmp && \
-git clone git@github.com:dvidelabs/flatcc.git && \
+git clone https://github.com/dvidelabs/flatcc.git && \
 cp -R flatcc/include/flatcc $OUTPUT_DIR/src && \
 cp flatcc/LICENSE $OUTPUT_DIR && \
 cp flatcc/src/runtime/*.c $OUTPUT_DIR/src
@@ -15,13 +15,13 @@ FLATCC_VERSION=$(grep FLATCC_VERSION_TEXT flatcc/include/flatcc/flatcc_version.h
 cd $OUTPUT_DIR
 
 cat <<EOF > library.properties
-name=ArduioFlatCC
+name=ArduinoFlatCC
 version=$FLATCC_VERSION
 author=dvidelabs
 maintainer=rimim
 sentence=Arduino version of flatcc
 paragraph=FlatBuffers implementation flatcc packaged for Arduino
-catagory=Communications
+category=Communication
 url=https://github.com/rimim/ArduinoFlatCC
 EOF
 
